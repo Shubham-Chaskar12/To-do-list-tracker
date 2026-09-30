@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Tracker & Todo List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>My Tracker</h1>
+            <p>Track your daily tasks and yearly progress.</p>
+        </header>
+
+        <!-- Yearly Activity Section -->
+        <section class="activity-section">
+            <h2>Yearly Activity (<span id="current-year"></span>)</h2>
+            <div class="yearly-grid" id="yearly-grid">
+                <!-- JavaScript will populate the 12 months here -->
+            </div>
+        </section>
+
+        <!-- Add Task Section -->
+        <section class="input-section">
+            <input type="text" id="todo-input" placeholder="What needs to be done?">
+            <input type="date" id="todo-date" title="Select Date">
+            <button id="add-btn">Add Task</button>
+        </section>
+
+        <!-- Todo List Section -->
+        <section class="list-section">
+            <div class="filters">
+                <button class="filter-btn active" data-filter="today">Today</button>
+                <button class="filter-btn" data-filter="month">This Month</button>
+                <button class="filter-btn" data-filter="all">All Time</button>
+            </div>
+            
+            <ul id="todo-list">
+                <!-- JavaScript will populate the tasks here -->
+            </ul>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
